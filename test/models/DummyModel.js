@@ -41,7 +41,6 @@ describe('API Routes', function() {
                 .end(function(err, res) {
                     res.should.have.status(200);
                     res.should.be.json;
-                    console.log(res.body[0]);
                     res.body.should.be.a('array');
                     res.body.length.should.equal(4);
                     res.body[0].should.have.property('firstname');
